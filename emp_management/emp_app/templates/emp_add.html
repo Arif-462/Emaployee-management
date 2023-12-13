@@ -1,0 +1,70 @@
+{% extends "main.html" %}
+
+{% block title %}Adding Employee{% endblock title %}
+
+{% block content %}
+
+<div class="mx-auto pb-4 w-50 text-white ">
+    <div class="text-center bg-danger mb-0 p-2 text-white">
+        <h1>Employee adding here</h1>
+    </div>
+
+    <div class="shadow-lg px-4 mx-auto">
+        <form action="" method="post">
+            {% csrf_token %}
+    
+            <div class="mt-2 flex justify-content-between">
+                <label for="first_name" class="block text-base ">First Name</label>
+                <p>{{form.first_name}}</p>
+            </div>
+    
+            <div class="mt-2">
+                <label for="first_name" class="block text-base ">Last Name</label>
+                {{form.last_name}}
+            </div>
+    
+            <div class="mt-2">
+                <label for="department" class="block text-base">Department</label>
+                {{form.department}}
+            </div>
+    
+            <div class="mt-2">
+                <label for="designation" class="block text-base">Designation</label>
+                {{form.designation}}
+            </div>
+    
+            <div class="mt-2">
+                <label for="salary" class="block text-base">Salary</label>
+                {{form.salary}}
+            </div>
+    
+            <div class="mt-2">
+                <label for="bonus" class="block text-base">Bonus</label>
+                {{form.bonus}}
+            </div>
+    
+            <div class="mt-2">
+                <label for="phone" class="block text-base ">Phone</label>
+                {{form.phone}}
+            </div>
+    
+            <div class="mt-2">
+                <label for="email" class="block text-base ">Email Address</label>
+                {{form.email}}
+            </div>
+    
+            <div class="mt-2">
+                <label for="hiring_date" class="block text-base ">Enorollment Date</label>
+                {{form.hiring_date}}
+            </div>
+    
+            <div class="mt-4">
+                <button type="submit" class="btn btn-primary w-100 btn-outline-warning">Submit</button>
+            </div>
+    
+        </form> 
+    </div>
+</div>
+
+
+{% endblock content %}

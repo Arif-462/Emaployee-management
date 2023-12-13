@@ -1,0 +1,40 @@
+{% extends "main.html" %}
+
+{% block title %}Filering Employee {% endblock title %}
+
+{% block content %}
+<div class="w-50 mx-auto text-white">
+    <div class="bg-danger text-center mb-0 p-2 text-white">
+        <h2>Employee Searching or Filtering</h2>
+    </div>
+    <div class=" shadow-lg p-4">
+        
+        <form action="{% url 'emp_filter'%}" method="post">
+            {% csrf_token %}
+        
+            <div class="mt-2">
+                <label for="name" >First Name / Last Name</label><br>
+                <input class="form-control" type="text" id="name", name="name" value="{{name}}">
+            </div>
+            
+        
+            <div class="mt-2">
+                <label for="department" class="block text-base">Department</label><br>
+                <input type="text"class="form-control" id="department", name="department" value="{{department}}">
+            </div>
+        
+            <div class="mt-2 mb-4">
+                <label for="designation" class="block text-base">Designation</label><br>
+                <input type="text"class="form-control" id="designation", name="designation" value="{{designation}}">
+            </div>
+        
+            <div class="mt-6">
+                <button type="submit" class="btn btn-primary form-control">Search Employee</button>
+            </div>       
+            
+        
+        </form> 
+    </div>
+
+</div>
+{% endblock content %}
