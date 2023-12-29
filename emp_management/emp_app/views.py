@@ -3,6 +3,7 @@ from django.contrib import messages
 from .models import Employee, Appointment, Department
 from .forms import EmployeeForm
 from django.db.models import Q
+from django.contrib.auth import logout, login
 
 # Create your views here.
 
@@ -91,6 +92,11 @@ def userLogin(request):
 def userRegistration(request):
     pass
 
+
+# user log out here
+def userLogout(request):
+    logout(request)
+    return redirect('login')
             
     
     

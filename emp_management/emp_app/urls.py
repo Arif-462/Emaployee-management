@@ -11,4 +11,5 @@ urlpatterns = [
     path('emp_edit/<int:id>/', views.emp_edit, name = "emp_edit"),
     path('emp_filter/', views.emp_filter, name = "emp_filter"),
     # path('searchitem/', views.searchitem, name = "searchitem"),
+    path('userLogout/', views.userLogout, name = "userLogout"),
 ]
